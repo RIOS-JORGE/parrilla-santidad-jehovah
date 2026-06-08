@@ -8,7 +8,7 @@ interface CategoryGroupProps {
 export function CategoryGroup({ category }: CategoryGroupProps) {
   return (
     <div className="mb-12">
-      <h3 className="text-[#f5f5f5] font-black text-2xl uppercase mb-6 tracking-wide">
+      <h3 className="text-brand-text font-black text-2xl uppercase mb-6 tracking-wide">
         {category.category.name}
       </h3>
 

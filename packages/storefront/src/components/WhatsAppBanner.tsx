@@ -4,13 +4,13 @@ export function WhatsAppBanner() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
   return (
-    <section className="bg-[#1a1a1a] text-[#f5f5f5] px-4 py-16 md:py-20">
+    <section className="bg-brand-surface text-brand-text px-4 py-16 md:py-20">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-black mb-4">
           Hacé tu pedido por WhatsApp
         </h2>
 
-        <p className="text-[#f5f5f5]/70 mb-8 text-lg">
+        <p className="text-brand-text/70 mb-8 text-lg">
           Escribinos y te armamos tu pedido al instante.
         </p>
 
@@ -18,7 +18,7 @@ export function WhatsAppBanner() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-[#f59e0b] text-[#0a0a0a] font-bold text-lg px-10 py-4 hover:bg-[#f59e0b]/90 transition-colors"
+          className="inline-flex items-center gap-3 bg-brand-accent text-brand-bg font-bold text-lg px-10 py-4 hover:bg-brand-accent/90 transition-colors"
         >
           {/* WhatsApp SVG icon */}
           <svg

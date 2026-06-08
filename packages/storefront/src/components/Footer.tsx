@@ -7,10 +7,10 @@ import {
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] text-[#f5f5f5]/60 px-4 py-12 border-t border-[#1a1a1a]">
+    <footer className="bg-brand-bg text-brand-text/60 px-4 py-12 border-t border-brand-surface">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
-          <p className="font-bold text-[#f5f5f5] text-lg">{STORE_NAME}</p>
+          <p className="font-bold text-brand-text text-lg">{STORE_NAME}</p>
           <p className="text-sm mt-1">Hamburguesas artesanales en Baradero</p>
         </div>
 
@@ -19,7 +19,7 @@ export function Footer() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#f5f5f5]/60 hover:text-[#f59e0b] transition-colors text-sm font-medium"
+            className="text-brand-text/60 hover:text-brand-accent transition-colors text-sm font-medium"
           >
             Instagram
           </a>
@@ -27,7 +27,7 @@ export function Footer() {
             href={`https://wa.me/${WHATSAPP_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#f5f5f5]/60 hover:text-[#f59e0b] transition-colors text-sm font-medium"
+            className="text-brand-text/60 hover:text-brand-accent transition-colors text-sm font-medium"
           >
             WhatsApp
           </a>
@@ -35,7 +35,7 @@ export function Footer() {
             href={`https://instagram.com/${INSTAGRAM_HANDLE}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#f5f5f5]/60 hover:text-[#f59e0b] transition-colors text-sm font-medium"
+            className="text-brand-text/60 hover:text-brand-accent transition-colors text-sm font-medium"
           >
             @{INSTAGRAM_HANDLE}
           </a>

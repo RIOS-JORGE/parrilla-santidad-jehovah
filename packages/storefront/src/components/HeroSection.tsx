@@ -9,11 +9,11 @@ export function HeroSection() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[#0a0a0a] text-[#f5f5f5] px-4">
+    <section className="min-h-screen flex items-center justify-center bg-brand-bg text-brand-text px-4">
       <div className="text-center max-w-2xl">
         {/* Logo placeholder */}
-        <div className="w-28 h-28 mx-auto mb-8 bg-[#1a1a1a] flex items-center justify-center">
-          <span className="text-3xl font-black text-[#f59e0b] tracking-widest">
+        <div className="w-28 h-28 mx-auto mb-8 bg-brand-surface flex items-center justify-center">
+          <span className="text-3xl font-black text-brand-accent tracking-widest">
             LOGO
           </span>
         </div>
@@ -22,7 +22,7 @@ export function HeroSection() {
           {STORE_NAME}
         </h1>
 
-        <p className="text-lg md:text-xl text-[#f5f5f5]/70 mb-10 max-w-lg mx-auto">
+        <p className="text-lg md:text-xl text-brand-text/70 mb-10 max-w-lg mx-auto">
           {STORE_DESCRIPTION}
         </p>
 
@@ -30,7 +30,7 @@ export function HeroSection() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#f59e0b] text-[#0a0a0a] font-bold text-lg px-10 py-4 hover:bg-[#f59e0b]/90 transition-colors"
+          className="inline-block bg-brand-accent text-brand-bg font-bold text-lg px-10 py-4 hover:bg-brand-accent/90 transition-colors"
         >
           Pedí por WhatsApp
         </a>

@@ -2,13 +2,13 @@ import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '../lib/constants'
 
 export function InstagramSection() {
   return (
-    <section className="bg-[#0a0a0a] text-[#f5f5f5] px-4 py-20 md:py-28">
+    <section className="bg-brand-bg text-brand-text px-4 py-20 md:py-28">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-black mb-6 text-[#f59e0b]">
+        <h2 className="text-3xl md:text-4xl font-black mb-6 text-brand-accent">
           Seguinos en Instagram
         </h2>
 
-        <p className="text-[#f5f5f5]/70 mb-8 text-lg">
+        <p className="text-brand-text/70 mb-8 text-lg">
           Enterate de nuestras promos, nuevos productos y todo lo que pasa en
           la parrilla.
         </p>
@@ -17,7 +17,7 @@ export function InstagramSection() {
           href={INSTAGRAM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-[#1a1a1a] text-[#f5f5f5] font-bold px-8 py-4 hover:bg-[#f59e0b] hover:text-[#0a0a0a] transition-colors text-lg"
+          className="inline-flex items-center gap-3 bg-brand-surface text-brand-text font-bold px-8 py-4 hover:bg-brand-accent hover:text-brand-bg transition-colors text-lg"
         >
           {/* Instagram SVG icon */}
           <svg
