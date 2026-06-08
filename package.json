@@ -1,0 +1,11 @@
+{
+  "name": "la-brutal-hamburgueseria",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "pnpm --filter @la-brutal/storefront dev",
+    "dev:backend": "pnpm --filter @la-brutal/backend dev",
+    "build": "pnpm --filter @la-brutal/storefront build",
+    "lint": "eslint ."
+  }
+}
