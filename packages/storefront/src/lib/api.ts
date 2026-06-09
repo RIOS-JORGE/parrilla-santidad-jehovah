@@ -1,6 +1,6 @@
 import type { MedusaCategory, MedusaProduct } from './types'
 
-const PUBLISHABLE_API_KEY = '' // TODO: configure from env or runtime
+const PUBLISHABLE_API_KEY = import.meta.env.VITE_MEDUSA_PUBLISHABLE_KEY || ''
 
 async function request<T>(
   endpoint: string,
