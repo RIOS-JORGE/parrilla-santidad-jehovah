@@ -1,4 +1,6 @@
 import type { MedusaProduct } from '../lib/types'
+import { useCart } from '../context/CartContext'
+import type { CartItem } from '../lib/cart.types'
 
 interface MenuItemProps {
   product: MedusaProduct
@@ -38,6 +40,62 @@ export function MenuItem({ product }: MenuItemProps) {
       <span className="text-brand-accent font-black text-xl mt-auto">
         {formattedPrice}
       </span>
+
+      <AddToCartControls product={product} priceAmount={price?.amount ?? 0} />
+    </div>
+  )
+}
+
+function AddToCartControls({
+  product,
+  priceAmount,
+}: {
+  product: MedusaProduct
+  priceAmount: number
+}) {
+  const { state, addItem, updateQuantity } = useCart()
+
+  const cartItem = state.items.find(
+    (item) => item.productId === product.id,
+  )
+
+  if (!cartItem) {
+    return (
+      <button
+        onClick={() => {
+          const item: CartItem = {
+            productId: product.id,
+            title: product.title,
+            price: priceAmount,
+            quantity: 1,
+          }
+          addItem(item)
+        }}
+        className="w-full mt-1 bg-brand-accent text-black font-bold py-2 rounded text-sm uppercase tracking-wider hover:bg-brand-accent-hover transition-colors"
+        aria-label={`Agregar ${product.title} al carrito`}
+      >
+        Agregar
+      </button>
+    )
+  }
+
+  return (
+    <div className="flex items-center justify-between mt-1 bg-brand-muted rounded px-3 py-2">
+      <button
+        onClick={() => updateQuantity(product.id, cartItem.quantity - 1)}
+        className="w-8 h-8 rounded-full bg-brand-surface flex items-center justify-center font-bold text-sm hover:bg-brand-accent hover:text-black transition-colors"
+        aria-label={`Disminuir cantidad de ${product.title}`}
+      >
+        −
+      </button>
+      <span className="font-bold text-brand-text">{cartItem.quantity}</span>
+      <button
+        onClick={() => updateQuantity(product.id, cartItem.quantity + 1)}
+        className="w-8 h-8 rounded-full bg-brand-surface flex items-center justify-center font-bold text-sm hover:bg-brand-accent hover:text-black transition-colors"
+        aria-label={`Aumentar cantidad de ${product.title}`}
+      >
+        +
+      </button>
     </div>
   )
 }
