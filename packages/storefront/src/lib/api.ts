@@ -32,7 +32,7 @@ interface ProductsResponse {
 
 export async function fetchCategories(): Promise<MedusaCategory[]> {
   const data = await request<CategoriesResponse>(
-    '/api/store/product-categories',
+    '/api/store/product-categories?fields=*id,name,handle,rank',
   )
   return data.product_categories
 }
@@ -41,7 +41,7 @@ export async function fetchProductsByCategory(
   categoryId: string,
 ): Promise<MedusaProduct[]> {
   const data = await request<ProductsResponse>(
-    `/api/store/products?category_id[]=${categoryId}`,
+    `/api/store/products?category_id[]=${categoryId}&fields=*variants.prices,title,description,thumbnail,handle`,
   )
   return data.products
 }
