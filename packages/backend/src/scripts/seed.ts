@@ -13,8 +13,13 @@ interface ProductData {
   handle: string
   description: string
   categoryHandle: string
+  options: Array<{
+    title: string
+    values: string[]
+  }>
   variants: Array<{
     title: string
+    options: Record<string, string>
     prices: Array<{
       amount: number
       currency_code: string
@@ -35,9 +40,11 @@ const productsData: ProductData[] = [
     handle: 'la-clasica',
     description: '120g carne, cheddar, lechuga, tomate',
     categoryHandle: 'simples',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 5500, currency_code: 'ars' }],
       },
     ],
@@ -47,9 +54,11 @@ const productsData: ProductData[] = [
     handle: 'la-bbq',
     description: '120g carne, cheddar, cebolla crispy, salsa BBQ',
     categoryHandle: 'simples',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 6200, currency_code: 'ars' }],
       },
     ],
@@ -59,9 +68,11 @@ const productsData: ProductData[] = [
     handle: 'la-criolla',
     description: '120g carne, provolone, tomate, huevo',
     categoryHandle: 'simples',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 6500, currency_code: 'ars' }],
       },
     ],
@@ -71,9 +82,11 @@ const productsData: ProductData[] = [
     handle: 'la-doble-clasica',
     description: '2x120g carne, doble cheddar, lechuga, tomate',
     categoryHandle: 'dobles',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 7800, currency_code: 'ars' }],
       },
     ],
@@ -83,9 +96,11 @@ const productsData: ProductData[] = [
     handle: 'la-doble-bbq',
     description: '2x120g carne, doble cheddar, cebolla crispy, salsa BBQ',
     categoryHandle: 'dobles',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 8500, currency_code: 'ars' }],
       },
     ],
@@ -95,9 +110,11 @@ const productsData: ProductData[] = [
     handle: 'la-bruta',
     description: '2x150g carne, doble cheddar, panceta, huevo, salsa especial',
     categoryHandle: 'dobles',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 9500, currency_code: 'ars' }],
       },
     ],
@@ -107,9 +124,11 @@ const productsData: ProductData[] = [
     handle: 'papas-fritas',
     description: 'Porción de papas crocantes',
     categoryHandle: 'papas',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 2800, currency_code: 'ars' }],
       },
     ],
@@ -119,9 +138,11 @@ const productsData: ProductData[] = [
     handle: 'papas-con-cheddar',
     description: 'Papas con cheddar y panceta',
     categoryHandle: 'papas',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 3500, currency_code: 'ars' }],
       },
     ],
@@ -131,9 +152,11 @@ const productsData: ProductData[] = [
     handle: 'coca-cola-500ml',
     description: 'Gaseosa Coca-Cola 500ml',
     categoryHandle: 'bebidas',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 1800, currency_code: 'ars' }],
       },
     ],
@@ -143,9 +166,11 @@ const productsData: ProductData[] = [
     handle: 'agua-500ml',
     description: 'Agua mineral 500ml',
     categoryHandle: 'bebidas',
+    options: [{ title: 'Tipo', values: ['Único'] }],
     variants: [
       {
         title: 'Único',
+        options: { Tipo: 'Único' },
         prices: [{ amount: 1200, currency_code: 'ars' }],
       },
     ],
@@ -215,6 +240,7 @@ export default async function seed({
     handle: p.handle,
     description: p.description,
     categories: [{ id: categoryHandleToId.get(p.categoryHandle) }],
+    options: p.options,
     variants: p.variants,
   }))
 
