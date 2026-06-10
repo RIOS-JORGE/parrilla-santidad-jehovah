@@ -18,7 +18,7 @@ export function HeroSection() {
           <img src={logo} alt={`${STORE_NAME} Logo`} className="w-50 h-50" />
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-black mb-4 leading-tight">
           {STORE_NAME}
         </h1>
 

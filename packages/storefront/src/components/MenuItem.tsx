@@ -18,10 +18,10 @@ export function MenuItem({ product }: MenuItemProps) {
         <img
           src={product.thumbnail}
           alt={product.title}
-          className="w-full h-40 object-cover"
+          className="w-full h-70 object-contain"
         />
       ) : (
-        <div className="w-full h-40 bg-brand-muted flex items-center justify-center">
+        <div className="w-full h-70 bg-brand-muted flex items-center justify-center">
           <span className="text-brand-accent font-bold text-sm uppercase tracking-widest">
             Foto
           </span>
@@ -29,9 +29,9 @@ export function MenuItem({ product }: MenuItemProps) {
       )}
 
       <div className="flex flex-col gap-1">
-        <h3 className="text-brand-text font-bold text-lg uppercase tracking-wide">
+        <h4 className="text-brand-text font-bold text-lg uppercase tracking-wide">
           {product.title}
-        </h3>
+        </h4>
         <p className="text-brand-text/60 text-sm leading-relaxed">
           {product.description}
         </p>
@@ -71,7 +71,7 @@ function AddToCartControls({
           }
           addItem(item)
         }}
-        className="w-full mt-1 bg-brand-accent text-black font-bold py-2 rounded text-sm uppercase tracking-wider hover:bg-brand-accent-hover transition-colors"
+        className="w-full mt-1 bg-brand-accent text-black font-bold py-2 text-sm uppercase tracking-wider hover:bg-brand-accent-hover transition-colors"
         aria-label={`Agregar ${product.title} al carrito`}
       >
         Agregar

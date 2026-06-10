@@ -16,12 +16,14 @@ export default function App() {
   return (
     <CartProvider>
       <div className="min-h-screen bg-brand-bg text-brand-text">
-        <HeroSection />
-        <AboutSection />
-        <MenuSection />
-        <HoursSection />
-        <WhatsAppBanner />
-        <InstagramSection />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <MenuSection />
+          <HoursSection />
+          <WhatsAppBanner />
+          <InstagramSection />
+        </main>
         <Footer />
         <CartBar onOpen={() => setIsSheetOpen(true)} />
         <CartSheet

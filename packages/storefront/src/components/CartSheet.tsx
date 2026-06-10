@@ -28,14 +28,14 @@ export function CartSheet({ open, onClose }: CartSheetProps) {
       {/* Sheet panel */}
       <div
         data-testid="cart-sheet-panel"
-        className={`relative z-10 w-full bg-brand-surface text-brand-text rounded-t-2xl max-h-[70vh] flex flex-col transition-transform duration-300 ${
+        className={`relative z-10 w-full bg-brand-surface text-brand-text rounded-t-2xl max-h-[85vh] flex flex-col transition-transform duration-300 ${
           open ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
         {open && (
           <>
-            {/* Header */}
-            <div className="flex items-center justify-between px-4 py-4 border-b border-brand-muted">
+            {/* Header (fixed) */}
+            <div className="flex items-center justify-between px-4 py-4 border-b border-brand-muted shrink-0">
               <h2 className="text-lg font-bold uppercase tracking-wide">
                 Tu pedido
               </h2>
@@ -48,8 +48,9 @@ export function CartSheet({ open, onClose }: CartSheetProps) {
               </button>
             </div>
 
-            {/* Item list */}
+            {/* Scrollable content: items + total + checkout */}
             <div className="flex-1 overflow-y-auto px-4 py-2">
+              {/* Item list */}
               {state.items.length === 0 && (
                 <p className="text-brand-text/60 text-center py-8">
                   No hay items en tu carrito
@@ -106,19 +107,19 @@ export function CartSheet({ open, onClose }: CartSheetProps) {
                   </span>
                 </div>
               ))}
-            </div>
 
-            {/* Total */}
-            <div className="px-4 py-3 border-t border-brand-muted flex items-center justify-between bg-brand-muted/30">
-              <span className="font-bold uppercase text-sm">Total</span>
-              <span className="font-black text-lg text-brand-accent">
-                {formatPrice(totalPrice)}
-              </span>
-            </div>
+              {/* Total */}
+              <div className="mt-2 pt-3 border-t border-brand-muted flex items-center justify-between bg-brand-surface sticky bottom-0">
+                <span className="font-bold uppercase text-sm">Total</span>
+                <span className="font-black text-lg text-brand-accent">
+                  {formatPrice(totalPrice)}
+                </span>
+              </div>
 
-            {/* Checkout form */}
-            <div className="px-4 py-3">
-              <CartCheckout onClose={onClose} />
+              {/* Checkout form */}
+              <div className="mt-4 pb-4">
+                <CartCheckout onClose={onClose} />
+              </div>
             </div>
           </>
         )}
