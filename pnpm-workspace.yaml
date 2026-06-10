@@ -1,2 +1,7 @@
 packages:
   - 'packages/*'
+allowBuilds:
+  '@medusajs/telemetry': true
+  esbuild: true
+  msgpackr-extract: true
+  protobufjs: true

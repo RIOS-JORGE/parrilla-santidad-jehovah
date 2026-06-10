@@ -1,11 +1,36 @@
-function App() {
+import { useState } from 'react'
+import { HeroSection } from './components/HeroSection'
+import { AboutSection } from './components/AboutSection'
+import { MenuSection } from './components/MenuSection'
+import { HoursSection } from './components/HoursSection'
+import { WhatsAppBanner } from './components/WhatsAppBanner'
+import { InstagramSection } from './components/InstagramSection'
+import { Footer } from './components/Footer'
+import { CartProvider } from './context/CartContext'
+import { CartBar } from './components/CartBar'
+import { CartSheet } from './components/CartSheet'
+
+export default function App() {
+  const [isSheetOpen, setIsSheetOpen] = useState(false)
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-amber-50">
-      <h1 className="text-4xl font-bold text-stone-800">
-        La Brutal Hamburguesería
-      </h1>
-    </div>
+    <CartProvider>
+      <div className="min-h-screen bg-brand-bg text-brand-text">
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <MenuSection />
+          <HoursSection />
+          <WhatsAppBanner />
+          <InstagramSection />
+        </main>
+        <Footer />
+        <CartBar onOpen={() => setIsSheetOpen(true)} />
+        <CartSheet
+          open={isSheetOpen}
+          onClose={() => setIsSheetOpen(false)}
+        />
+      </div>
+    </CartProvider>
   )
 }
-
-export default App
