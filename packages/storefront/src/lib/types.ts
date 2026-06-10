@@ -18,7 +18,7 @@ export interface MedusaProduct {
   id: string
   title: string
   description: string
-  thumbnail?: string
+  thumbnail?: string | null
   variants: MedusaProductVariant[]
 }
 
