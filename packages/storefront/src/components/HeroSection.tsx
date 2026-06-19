@@ -15,7 +15,7 @@ export function HeroSection() {
       <div className="text-center max-w-2xl">
         {/* Logo placeholder */}
         <div className="w-50 h-50 rounded-[50%] mx-auto mb-8 bg-brand-surface flex items-center justify-center">
-          <img src={logo} alt={`${STORE_NAME} Logo`} className="w-50 h-50" />
+          <img src={logo} alt={`${STORE_NAME} Logo`} className="w-50 h-50" loading="lazy" />
         </div>
 
         <h1 className="text-3xl sm:text-5xl md:text-7xl font-black mb-4 leading-tight">

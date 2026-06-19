@@ -18,6 +18,7 @@ export function MenuItem({ product }: MenuItemProps) {
         <img
           src={product.thumbnail}
           alt={product.title}
+          loading="lazy"
           className="w-full h-70 object-contain"
         />
       ) : (
