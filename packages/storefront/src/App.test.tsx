@@ -14,16 +14,20 @@ describe('App integration', () => {
     vi.clearAllMocks()
 
     vi.mocked(fetchCategories).mockResolvedValue([
-      { id: 'cat-1', name: 'Hamburguesas', handle: 'hamburguesas' },
+      { id: 1, name: 'Hamburguesas', handle: 'hamburguesas', rank: 0, created_at: '' },
     ])
 
     vi.mocked(fetchProductsByCategory).mockResolvedValue([
       {
-        id: 'prod-1',
+        id: 1,
+        category_id: 1,
         title: 'La Clásica',
         description: 'Hamburguesa clásica con cheddar',
-        thumbnail: null,
-        variants: [{ prices: [{ amount: 5500, currency_code: 'ars' }] }],
+        price: 5500,
+        thumbnail_url: null,
+        is_active: true,
+        created_at: '',
+        updated_at: '',
       },
     ])
   })

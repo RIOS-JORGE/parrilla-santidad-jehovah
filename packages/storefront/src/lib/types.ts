@@ -1,28 +1,24 @@
-export interface MedusaCategory {
-  id: string
+export interface Category {
+  id: number
   name: string
   handle: string
-  rank?: number
+  rank: number
+  created_at: string
 }
 
-export interface MedusaPrice {
-  amount: number
-  currency_code: string
-}
-
-export interface MedusaProductVariant {
-  prices: MedusaPrice[]
-}
-
-export interface MedusaProduct {
-  id: string
+export interface Product {
+  id: number
+  category_id: number
   title: string
-  description: string
-  thumbnail?: string | null
-  variants: MedusaProductVariant[]
+  description: string | null
+  price: number
+  thumbnail_url: string | null
+  is_active: boolean
+  created_at: string
+  updated_at: string
 }
 
 export interface MenuCategory {
-  category: MedusaCategory
-  products: MedusaProduct[]
+  category: Category
+  products: Product[]
 }

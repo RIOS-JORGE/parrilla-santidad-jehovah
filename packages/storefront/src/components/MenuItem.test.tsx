@@ -3,18 +3,18 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { CartProvider } from '../context/CartContext'
 import { MenuItem } from './MenuItem'
 import { type ReactNode } from 'react'
-import type { MedusaProduct } from '../lib/types'
+import type { Product } from '../lib/types'
 
-const mockProduct: MedusaProduct = {
-  id: 'prod-1',
+const mockProduct: Product = {
+  id: 1,
+  category_id: 1,
   title: 'La Clásica',
   description: 'Hamburguesa clásica con cheddar',
-  thumbnail: 'https://example.com/img.jpg',
-  variants: [
-    {
-      prices: [{ amount: 5500, currency_code: 'ars' }],
-    },
-  ],
+  price: 5500,
+  thumbnail_url: 'https://example.com/img.jpg',
+  is_active: true,
+  created_at: '',
+  updated_at: '',
 }
 
 function wrapper({ children }: { children: ReactNode }) {

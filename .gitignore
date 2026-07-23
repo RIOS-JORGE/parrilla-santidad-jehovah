@@ -28,6 +28,3 @@ test-results/
 *.njsproj
 *.sln
 *.sw?
-
-# Medusa generated files
-.medusa/
