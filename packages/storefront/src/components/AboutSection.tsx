@@ -9,20 +9,16 @@ export function AboutSection() {
         </h2>
         <div className="space-y-4 text-brand-text/80 text-lg leading-relaxed">
           <p>
-            En {STORE_NAME}, cada hamburguesa es el resultado de una obsesión
-            por la calidad. Seleccionamos los mejores cortes de carne, los
-            molinos en nuestro local y los cocinamos a la parrilla para que
-            cada bocado sea una experiencia única.
+            La Brutal nació de una idea simple: hacer smash burgers como nos gusta comerlas a nosotros. Sin vueltas, con carne de calidad, ingredientes frescos y ese sellado en la plancha que les da un sabor único.
           </p>
           <p>
-            Nacimos en Baradero con una idea simple: hamburguesas artesanales
-            hechas como se merecen, con ingredientes frescos y mucho carácter.
-            Sin vueltas, sin pretensiones. Solo buena comida.
+            Empezamos con la ilusión de crear un lugar donde cada hamburguesa se preparara en el momento, cuidando cada detalle para que cada pedido fuera una experiencia.
           </p>
           <p>
-            Creemos en lo simple bien hecho. Por eso nuestras papas se cortan
-            a mano, nuestras salsas se preparan en el día y cada pedido se
-            arma en el momento. Todo al fuego, todo fresco, todo brutal.
+            Hoy seguimos con la misma pasión del primer día, buscando que cada persona que pruebe una de nuestras burgers quiera volver por otra.
+          </p>
+          <p>
+            Porque una buena smash burger no se explica, se prueba. 🍔🔥
           </p>
         </div>
       </div>
