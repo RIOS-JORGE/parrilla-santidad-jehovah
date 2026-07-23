@@ -15,7 +15,7 @@ function paymentMethodLabel(method: PaymentMethod): string {
   const labels: Record<PaymentMethod, string> = {
     efectivo: 'Efectivo',
     transferencia: 'Transferencia',
-    tarjeta: 'Tarjeta',
+
   }
   return labels[method]
 }

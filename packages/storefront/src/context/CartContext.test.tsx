@@ -178,13 +178,13 @@ describe('CartContext', () => {
     act(() => {
       result.current.updateDeliveryInfo({
         deliveryMode: 'takeaway',
-        paymentMethod: 'tarjeta',
+        paymentMethod: 'transferencia',
         notes: 'Gracias',
       })
     })
 
     expect(result.current.state.deliveryMode).toBe('takeaway')
-    expect(result.current.state.paymentMethod).toBe('tarjeta')
+    expect(result.current.state.paymentMethod).toBe('transferencia')
     expect(result.current.state.notes).toBe('Gracias')
   })
 

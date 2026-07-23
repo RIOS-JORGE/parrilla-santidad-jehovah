@@ -110,7 +110,6 @@ export function CartCheckout({ onClose }: CartCheckoutProps) {
             [
               { value: 'efectivo', label: 'Efectivo' },
               { value: 'transferencia', label: 'Transferencia' },
-              { value: 'tarjeta', label: 'Tarjeta' },
             ] as { value: PaymentMethod; label: string }[]
           ).map(({ value, label }) => (
             <label

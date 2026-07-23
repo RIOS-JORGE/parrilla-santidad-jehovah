@@ -29,12 +29,11 @@ describe('CartCheckout', () => {
     expect(screen.getByLabelText('Piso / Dpto (opcional)')).toBeInTheDocument()
   })
 
-  it('renders payment method selector with three options', () => {
-    render(<CartCheckout onClose={() => {}} />, { wrapper })
+  it('renders payment method selector with two options', () => {
+    render(<CartCheckout onClose={vi.fn()} />, { wrapper })
 
     expect(screen.getByLabelText('Efectivo')).toBeInTheDocument()
     expect(screen.getByLabelText('Transferencia')).toBeInTheDocument()
-    expect(screen.getByLabelText('Tarjeta')).toBeInTheDocument()
   })
 
   it('renders notes textarea', () => {

@@ -1,6 +1,6 @@
 export type DeliveryMode = 'delivery' | 'takeaway'
 
-export type PaymentMethod = 'efectivo' | 'transferencia' | 'tarjeta'
+export type PaymentMethod = 'efectivo' | 'transferencia'
 
 export interface CartItem {
   productId: string
