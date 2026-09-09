@@ -61,7 +61,7 @@ describe('formatCartMessage', () => {
     }
     const msg = formatCartMessage(state)
 
-    expect(msg).toContain('🍔 Pedido - Parrilla Santidad a Jehovah')
+    expect(msg).toContain('*PEDIDO - Parrilla Santidad a Jehovah*')
     expect(msg).toContain('2x La Clásica - $5.500')
     expect(msg).toContain('Total: $11.000')
   })
@@ -76,7 +76,7 @@ describe('formatCartMessage', () => {
     }
     const msg = formatCartMessage(state)
 
-    expect(msg).toContain('📍 Delivery')
+    expect(msg).toContain('Delivery')
     expect(msg).toContain('Av. Siempre Viva 123')
   })
 
@@ -90,7 +90,7 @@ describe('formatCartMessage', () => {
     }
     const msg = formatCartMessage(state)
 
-    expect(msg).toContain('📍 Takeaway')
+    expect(msg).toContain('Takeaway')
     expect(msg).not.toContain('Delivery')
   })
 
@@ -105,7 +105,7 @@ describe('formatCartMessage', () => {
     }
     const msg = formatCartMessage(state)
 
-    expect(msg).toContain('💳 Pago: Transferencia')
+    expect(msg).toContain('Pago: Transferencia')
   })
 
   it('shows "Sin notas" when notes are empty', () => {
@@ -118,7 +118,7 @@ describe('formatCartMessage', () => {
     }
     const msg = formatCartMessage(state)
 
-    expect(msg).toContain('📝 Sin notas')
+    expect(msg).toContain('Notas: Sin notas')
   })
 
   it('includes notes when provided', () => {
@@ -132,7 +132,7 @@ describe('formatCartMessage', () => {
     }
     const msg = formatCartMessage(state)
 
-    expect(msg).toContain('📝 Sin cebolla, por favor')
+    expect(msg).toContain('Notas: Sin cebolla, por favor')
   })
 
   it('truncates message at 2048 chars', () => {

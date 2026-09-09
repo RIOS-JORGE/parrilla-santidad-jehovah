@@ -1,6 +1,6 @@
 import type { CartItem, CartState, PaymentMethod } from './cart.types'
 
-const ORDER_PREFIX = '🍔 Pedido - Parrilla Santidad a Jehovah'
+const ORDER_PREFIX = '*PEDIDO - Parrilla Santidad a Jehovah*'
 const MAX_MESSAGE_LENGTH = 2048
 
 export function formatPrice(amount: number): string {
@@ -31,27 +31,26 @@ export function formatCartMessage(state: CartState): string {
   }
 
   lines.push('')
-  lines.push('─────────────────')
   const total = calculateTotal(state.items)
   lines.push(`Total: ${formatPrice(total)}`)
   lines.push('')
 
   if (state.deliveryMode === 'delivery') {
-    lines.push('📍 Delivery')
+    lines.push('Delivery')
     lines.push(`   ${state.address}`)
     if (state.floor) {
       lines.push(`   ${state.floor}`)
     }
   } else {
-    lines.push('📍 Takeaway')
+    lines.push('Takeaway')
   }
 
-  lines.push(`💳 Pago: ${paymentMethodLabel(state.paymentMethod)}`)
+  lines.push(`Pago: ${paymentMethodLabel(state.paymentMethod)}`)
 
   if (state.notes.trim()) {
-    lines.push(`📝 ${state.notes.trim()}`)
+    lines.push(`Notas: ${state.notes.trim()}`)
   } else {
-    lines.push('📝 Sin notas')
+    lines.push('Notas: Sin notas')
   }
 
   const message = lines.join('\n')

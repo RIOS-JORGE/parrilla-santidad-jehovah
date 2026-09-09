@@ -225,10 +225,10 @@ describe('CartContext', () => {
     expect(openSpy).toHaveBeenCalledTimes(1)
     const url = openSpy.mock.calls[0][0] as string
     expect(url).toMatch(/^https:\/\/wa\.me\/\d+\?text=/)
-    expect(decodeURIComponent(url)).toContain('🍔 Pedido - Parrilla Santidad a Jehovah')
-    expect(decodeURIComponent(url)).toContain('📍 Delivery')
+    expect(decodeURIComponent(url)).toContain('*PEDIDO - Parrilla Santidad a Jehovah*')
+    expect(decodeURIComponent(url)).toContain('Delivery')
     expect(decodeURIComponent(url)).toContain('Calle 123')
-    expect(decodeURIComponent(url)).toContain('💳 Pago: Efectivo')
+    expect(decodeURIComponent(url)).toContain('Pago: Efectivo')
   })
 
   it('throws when useCart is used outside CartProvider', () => {
