@@ -172,34 +172,18 @@ describe('CartContext', () => {
     expect(result.current.totalPrice).toBe(0)
   })
 
-  it('updates delivery info', () => {
+  it('updates payment method and notes', () => {
     const { result } = renderHook(() => useCart(), { wrapper: CartProvider })
 
     act(() => {
       result.current.updateDeliveryInfo({
-        deliveryMode: 'takeaway',
         paymentMethod: 'transferencia',
         notes: 'Gracias',
       })
     })
 
-    expect(result.current.state.deliveryMode).toBe('takeaway')
     expect(result.current.state.paymentMethod).toBe('transferencia')
     expect(result.current.state.notes).toBe('Gracias')
-  })
-
-  it('updates delivery address', () => {
-    const { result } = renderHook(() => useCart(), { wrapper: CartProvider })
-
-    act(() => {
-      result.current.updateDeliveryInfo({
-        address: 'Av. Siempre Viva 742',
-        floor: '3B',
-      })
-    })
-
-    expect(result.current.state.address).toBe('Av. Siempre Viva 742')
-    expect(result.current.state.floor).toBe('3B')
   })
 
   it('sendToWhatsApp builds URL and opens window', () => {
@@ -213,10 +197,6 @@ describe('CartContext', () => {
         price: 5000,
         quantity: 1,
       })
-      result.current.updateDeliveryInfo({
-        address: 'Calle 123',
-        paymentMethod: 'efectivo',
-      })
     })
     act(() => {
       result.current.sendToWhatsApp()
@@ -226,8 +206,7 @@ describe('CartContext', () => {
     const url = openSpy.mock.calls[0][0] as string
     expect(url).toMatch(/^https:\/\/wa\.me\/\d+\?text=/)
     expect(decodeURIComponent(url)).toContain('🍔 Pedido - Parrilla Santidad a Jehovah')
-    expect(decodeURIComponent(url)).toContain('📍 Delivery')
-    expect(decodeURIComponent(url)).toContain('Calle 123')
+    expect(decodeURIComponent(url)).toContain('📍 Takeaway')
     expect(decodeURIComponent(url)).toContain('💳 Pago: Efectivo')
   })
 

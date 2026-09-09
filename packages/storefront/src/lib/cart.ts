@@ -36,15 +36,7 @@ export function formatCartMessage(state: CartState): string {
   lines.push(`Total: ${formatPrice(total)}`)
   lines.push('')
 
-  if (state.deliveryMode === 'delivery') {
-    lines.push('📍 Delivery')
-    lines.push(`   ${state.address}`)
-    if (state.floor) {
-      lines.push(`   ${state.floor}`)
-    }
-  } else {
-    lines.push('📍 Takeaway')
-  }
+  lines.push('📍 Takeaway')
 
   lines.push(`💳 Pago: ${paymentMethodLabel(state.paymentMethod)}`)
 

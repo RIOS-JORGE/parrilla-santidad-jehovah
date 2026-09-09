@@ -45,8 +45,6 @@ describe('calculateTotal', () => {
 describe('formatCartMessage', () => {
   const baseState: CartState = {
     items: [],
-    deliveryMode: 'delivery',
-    address: '',
     paymentMethod: 'efectivo',
     notes: '',
   }
@@ -57,7 +55,6 @@ describe('formatCartMessage', () => {
       items: [
         { productId: '1', title: 'La Clásica', price: 5500, quantity: 2 },
       ],
-      address: 'Av. Siempre Viva 123',
     }
     const msg = formatCartMessage(state)
 
@@ -66,32 +63,16 @@ describe('formatCartMessage', () => {
     expect(msg).toContain('Total: $11.000')
   })
 
-  it('includes delivery address when mode is delivery', () => {
+  it('always includes takeaway location', () => {
     const state: CartState = {
       ...baseState,
       items: [
         { productId: '1', title: 'Burger', price: 5000, quantity: 1 },
       ],
-      address: 'Av. Siempre Viva 123',
-    }
-    const msg = formatCartMessage(state)
-
-    expect(msg).toContain('📍 Delivery')
-    expect(msg).toContain('Av. Siempre Viva 123')
-  })
-
-  it('omits address for takeaway', () => {
-    const state: CartState = {
-      ...baseState,
-      items: [
-        { productId: '1', title: 'Burger', price: 5000, quantity: 1 },
-      ],
-      deliveryMode: 'takeaway',
     }
     const msg = formatCartMessage(state)
 
     expect(msg).toContain('📍 Takeaway')
-    expect(msg).not.toContain('Delivery')
   })
 
   it('includes payment method label', () => {
@@ -100,7 +81,6 @@ describe('formatCartMessage', () => {
       items: [
         { productId: '1', title: 'Burger', price: 5000, quantity: 1 },
       ],
-      address: 'Calle 123',
       paymentMethod: 'transferencia',
     }
     const msg = formatCartMessage(state)
@@ -114,7 +94,6 @@ describe('formatCartMessage', () => {
       items: [
         { productId: '1', title: 'Burger', price: 5000, quantity: 1 },
       ],
-      address: 'Calle 123',
     }
     const msg = formatCartMessage(state)
 
@@ -127,7 +106,6 @@ describe('formatCartMessage', () => {
       items: [
         { productId: '1', title: 'Burger', price: 5000, quantity: 1 },
       ],
-      address: 'Calle 123',
       notes: 'Sin cebolla, por favor',
     }
     const msg = formatCartMessage(state)
@@ -145,7 +123,6 @@ describe('formatCartMessage', () => {
     const state: CartState = {
       ...baseState,
       items,
-      address: 'Calle Larga 9999',
       notes: 'Nota '.repeat(200),
     }
     const msg = formatCartMessage(state)
