@@ -9,16 +9,16 @@ export function AboutSection() {
         </h2>
         <div className="space-y-4 text-brand-text/80 text-lg leading-relaxed">
           <p>
-            La Brutal nació de una idea simple: hacer smash burgers como nos gusta comerlas a nosotros. Sin vueltas, con carne de calidad, ingredientes frescos y ese sellado en la plancha que les da un sabor único.
+            Parrilla Santidad a Jehovah nació de una idea simple: hacer comidas de parrilla como nos gusta comerlas a nosotros. Sin vueltas, con carne de calidad, ingredientes frescos y ese sabor ahumado que solo la parrilla puede dar.
           </p>
           <p>
-            Empezamos con la ilusión de crear un lugar donde cada hamburguesa se preparara en el momento, cuidando cada detalle para que cada pedido fuera una experiencia.
+            Empezamos con la ilusión de crear un lugar donde cada plato se preparara en el momento, cuidando cada detalle para que cada pedido fuera una experiencia.
           </p>
           <p>
-            Hoy seguimos con la misma pasión del primer día, buscando que cada persona que pruebe una de nuestras burgers quiera volver por otra.
+            Hoy seguimos con la misma pasión del primer día, buscando que cada persona que pruebe nuestra parrilla quiera volver por otra.
           </p>
           <p>
-            Porque una buena smash burger no se explica, se prueba. 🍔🔥
+            Porque una buena parrilla no se explica, se prueba. 🔥
           </p>
         </div>
       </div>

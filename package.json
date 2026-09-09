@@ -1,10 +1,10 @@
 {
-  "name": "la-brutal-hamburgueseria",
+  "name": "parrilla-santidad-jehovah",
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "pnpm --filter @la-brutal/storefront dev",
-    "build": "pnpm --filter @la-brutal/storefront build",
+    "dev": "pnpm --filter @parrilla-santidad/storefront dev",
+    "build": "pnpm --filter @parrilla-santidad/storefront build",
     "lint": "eslint ."
   }
 }

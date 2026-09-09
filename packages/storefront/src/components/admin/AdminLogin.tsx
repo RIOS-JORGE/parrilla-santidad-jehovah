@@ -29,7 +29,7 @@ export function AdminLogin() {
             Admin
           </h1>
           <p className="text-brand-text/60 text-sm mt-1">
-            La Brutal Hamburguesería
+            Parrilla Santidad a Jehovah
           </p>
         </div>
 

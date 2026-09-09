@@ -1,6 +1,6 @@
-# La Brutal Hamburguesería
+# Parrilla Santidad a Jehovah
 
-Landing page + menú vivo + carrito con checkout por WhatsApp para **La Brutal Hamburguesería**.
+Landing page + menú vivo + carrito con checkout por WhatsApp para **Parrilla Santidad a Jehovah**.
 Panel de administración para gestionar productos y categorías.
 
 ---
@@ -33,8 +33,8 @@ pnpm install
 
 # 2. Crear .env del storefront
 cat > packages/storefront/.env << 'EOF'
-VITE_SUPABASE_URL=https://zwqwdwkjohzgycnqncyd.supabase.co
-VITE_SUPABASE_ANON_KEY=sb_publishable_TjWKby4fAiaOtx_B0wxl5Q_MHXB33r2
+VITE_SUPABASE_URL=https://samkicedetdyxhszuome.supabase.co
+VITE_SUPABASE_ANON_KEY=sb_publishable_NXaE4QV-N3B5X0kzJBZYeQ_PzyFV3KJ
 VITE_WHATSAPP_NUMBER=5491125770755
 EOF
 
@@ -43,7 +43,7 @@ pnpm dev
 ```
 
 Storefront en `http://localhost:5173`.
-Admin en `http://localhost:5173/admin` (login: `admin@labrutal.com` / `labrutal123`).
+Admin en `http://localhost:5173/admin` (login: `admin@parrilla.com` / `parrilla123`).
 
 ---
 
@@ -116,8 +116,8 @@ El admin puede:
 
 | Variable | Valor |
 |---|---|
-| `VITE_SUPABASE_URL` | `https://zwqwdwkjohzgycnqncyd.supabase.co` |
-| `VITE_SUPABASE_ANON_KEY` | `sb_publishable_TjWKby4fAiaOtx_B0wxl5Q_MHXB33r2` |
+| `VITE_SUPABASE_URL` | `https://samkicedetdyxhszuome.supabase.co` |
+| `VITE_SUPABASE_ANON_KEY` | `sb_publishable_NXaE4QV-N3B5X0kzJBZYeQ_PzyFV3KJ` |
 | `VITE_WHATSAPP_NUMBER` | `5491125770755` |
 
 ### 3. Deploy

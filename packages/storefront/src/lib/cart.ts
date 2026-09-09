@@ -1,6 +1,6 @@
 import type { CartItem, CartState, PaymentMethod } from './cart.types'
 
-const ORDER_PREFIX = '🍔 Pedido - La Brutal Hamburguesería'
+const ORDER_PREFIX = '🍔 Pedido - Parrilla Santidad a Jehovah'
 const MAX_MESSAGE_LENGTH = 2048
 
 export function formatPrice(amount: number): string {

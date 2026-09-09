@@ -61,7 +61,7 @@ describe('formatCartMessage', () => {
     }
     const msg = formatCartMessage(state)
 
-    expect(msg).toContain('🍔 Pedido - La Brutal Hamburguesería')
+    expect(msg).toContain('🍔 Pedido - Parrilla Santidad a Jehovah')
     expect(msg).toContain('2x La Clásica - $5.500')
     expect(msg).toContain('Total: $11.000')
   })
