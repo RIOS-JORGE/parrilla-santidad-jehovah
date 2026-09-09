@@ -19,13 +19,18 @@ type CartAction =
   | { type: 'CLEAR_CART' }
   | {
       type: 'UPDATE_DELIVERY_INFO'
-      payload: Partial<Pick<CartState, 'paymentMethod' | 'notes'>>
+      payload: Partial<
+        Pick<CartState, 'deliveryMode' | 'address' | 'floor' | 'paymentMethod' | 'notes'>
+      >
     }
 
 // ── Initial state ────────────────────────────────────────────────────────
 
 const initialState: CartState = {
   items: [],
+  deliveryMode: 'delivery',
+  address: '',
+  floor: '',
   paymentMethod: 'efectivo',
   notes: '',
 }
@@ -98,7 +103,12 @@ interface CartContextValue {
   updateQuantity: (productId: string, quantity: number) => void
   clearCart: () => void
   updateDeliveryInfo: (
-    info: Partial<Pick<CartState, 'paymentMethod' | 'notes'>>,
+    info: Partial<
+      Pick<
+        CartState,
+        'deliveryMode' | 'address' | 'floor' | 'paymentMethod' | 'notes'
+      >
+    >,
   ) => void
   totalItems: number
   totalPrice: number
@@ -132,7 +142,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
   )
   const updateDeliveryInfo = useCallback(
     (
-      info: Partial<Pick<CartState, 'paymentMethod' | 'notes'>>,
+      info: Partial<
+        Pick<
+          CartState,
+          'deliveryMode' | 'address' | 'floor' | 'paymentMethod' | 'notes'
+        >
+      >,
     ) => dispatch({ type: 'UPDATE_DELIVERY_INFO', payload: info }),
     [],
   )

@@ -33,7 +33,7 @@ export function HoursSection() {
 
         <div className="text-brand-text/80 space-y-2">
           <p className="font-bold text-brand-text">{STORE_ADDRESS}</p>
-          <p>Solo take away</p>
+          <p>Solo delivery y take away</p>
         </div>
       </div>
     </section>
