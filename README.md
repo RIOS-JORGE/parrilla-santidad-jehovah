@@ -35,7 +35,7 @@ pnpm install
 cat > packages/storefront/.env << 'EOF'
 VITE_SUPABASE_URL=https://samkicedetdyxhszuome.supabase.co
 VITE_SUPABASE_ANON_KEY=sb_publishable_NXaE4QV-N3B5X0kzJBZYeQ_PzyFV3KJ
-VITE_WHATSAPP_NUMBER=5491125770755
+VITE_WHATSAPP_NUMBER=5491164490986
 EOF
 
 # 3. Iniciar
@@ -118,7 +118,7 @@ El admin puede:
 |---|---|
 | `VITE_SUPABASE_URL` | `https://samkicedetdyxhszuome.supabase.co` |
 | `VITE_SUPABASE_ANON_KEY` | `sb_publishable_NXaE4QV-N3B5X0kzJBZYeQ_PzyFV3KJ` |
-| `VITE_WHATSAPP_NUMBER` | `5491125770755` |
+| `VITE_WHATSAPP_NUMBER` | `5491164490986` |
 
 ### 3. Deploy
 
