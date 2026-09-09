@@ -2,8 +2,6 @@ import { STORE_HOURS, STORE_ADDRESS } from '../lib/constants'
 
 const DAY_LABELS: Record<keyof typeof STORE_HOURS, string> = {
   fri: 'Viernes',
-  sat: 'Sábados',
-  sun: 'Domingo',
 }
 
 export function HoursSection() {
@@ -35,7 +33,7 @@ export function HoursSection() {
 
         <div className="text-brand-text/80 space-y-2">
           <p className="font-bold text-brand-text">{STORE_ADDRESS}</p>
-          <p>Solo delivery y take away</p>
+          <p>Solo take away</p>
         </div>
       </div>
     </section>

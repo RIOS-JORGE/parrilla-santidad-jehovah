@@ -11,7 +11,7 @@ export function Footer() {
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
           <p className="font-bold text-brand-text text-lg">{STORE_NAME}</p>
-          <p className="text-sm mt-1">Hamburguesas artesanales en Baradero</p>
+          <p className="text-sm mt-1">Hurlingham, William Morris</p>
         </div>
 
         <nav className="flex items-center gap-6">
