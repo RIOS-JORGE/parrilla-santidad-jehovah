@@ -1,6 +1,6 @@
 {
   "buildCommand": "pnpm build",
-  "outputDirectory": "dist",
+  "outputDirectory": "packages/storefront/dist",
   "installCommand": "pnpm install",
   "framework": "vite",
   "rewrites": [
