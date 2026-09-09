@@ -1,4 +1,4 @@
-import { STORE_HOURS, STORE_ADDRESS } from '../lib/constants'
+import { STORE_HOURS, STORE_ADDRESS, STORE_MAPS_URL } from '../lib/constants'
 
 const DAY_LABELS: Record<keyof typeof STORE_HOURS, string> = {
   fri: 'Viernes',
@@ -32,7 +32,24 @@ export function HoursSection() {
         </div>
 
         <div className="text-brand-text/80 space-y-2">
-          <p className="font-bold text-brand-text">{STORE_ADDRESS}</p>
+          <a
+            href={STORE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-brand-text hover:text-brand-accent transition-colors inline-flex items-center gap-2"
+          >
+            📍 {STORE_ADDRESS}
+          </a>
+          <p>
+            <a
+              href={STORE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-accent hover:underline"
+            >
+              Cómo llegar en Google Maps
+            </a>
+          </p>
           <p>Solo delivery y take away</p>
         </div>
       </div>

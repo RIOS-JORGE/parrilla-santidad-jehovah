@@ -3,6 +3,8 @@ import {
   INSTAGRAM_URL,
   INSTAGRAM_HANDLE,
   WHATSAPP_NUMBER,
+  STORE_ADDRESS,
+  STORE_MAPS_URL,
 } from '../lib/constants'
 
 export function Footer() {
@@ -11,7 +13,7 @@ export function Footer() {
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
           <p className="font-bold text-brand-text text-lg">{STORE_NAME}</p>
-          <p className="text-sm mt-1">Hurlingham, William Morris</p>
+          <p className="text-sm mt-1">{STORE_ADDRESS}, Hurlingham</p>
         </div>
 
         <nav className="flex items-center gap-6">
@@ -32,12 +34,12 @@ export function Footer() {
             WhatsApp
           </a>
           <a
-            href={`https://instagram.com/${INSTAGRAM_HANDLE}`}
+            href={STORE_MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-brand-text/60 hover:text-brand-accent transition-colors text-sm font-medium"
           >
-            @{INSTAGRAM_HANDLE}
+            Google Maps
           </a>
         </nav>
 
