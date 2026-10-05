@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://labrutal.com/sitemap.xml
+Sitemap: https://parrillaloshnos.vercel.app/sitemap.xml
