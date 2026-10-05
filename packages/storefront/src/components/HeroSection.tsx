@@ -5,7 +5,7 @@ import {
   STORE_DESCRIPTION,
 } from '../lib/constants'
 
-const logo = '/santidad.jpg'
+const logo = '/Parrilla-Los-Hermanos.jpeg'
 
 export function HeroSection() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`

@@ -9,7 +9,7 @@ export function AboutSection() {
         </h2>
         <div className="space-y-4 text-brand-text/80 text-lg leading-relaxed">
           <p>
-            Parrilla Santidad a Jehovah nació de una idea simple: hacer comidas de parrilla como nos gusta comerlas a nosotros. Sin vueltas, con carne de calidad, ingredientes frescos y ese sabor ahumado que solo la parrilla puede dar.
+            Parrilla Los Hermanos nació de una idea simple: hacer comidas de parrilla como nos gusta comerlas a nosotros. Sin vueltas, con carne de calidad, ingredientes frescos y ese sabor ahumado que solo la parrilla puede dar.
           </p>
           <p>
             Empezamos con la ilusión de crear un lugar donde cada plato se preparara en el momento, cuidando cada detalle para que cada pedido fuera una experiencia.

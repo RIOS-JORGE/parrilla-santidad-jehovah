@@ -1,6 +1,6 @@
-# Parrilla Santidad a Jehovah
+# Parrilla Los Hermanos
 
-Landing page + menú vivo + carrito con checkout por WhatsApp para **Parrilla Santidad a Jehovah**.
+Landing page + menú vivo + carrito con checkout por WhatsApp para **Parrilla Los Hermanos**.
 Panel de administración para gestionar productos y categorías.
 
 ---
